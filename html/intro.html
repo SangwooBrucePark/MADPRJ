@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/intro.html.css" />
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/intro.html.js"></script>
+</head>
+<body onload="onpageload()" onresize="onpageload()">
+<div id="blockscreen" onclick="hideloginbox()"></div>
+<div id="loginbox">
+    <form method="post" action="../php/letmein.php" id="frm_logininfo">
+        <label>Email : </label>
+        <input type="text" class="auth_user_info" name="email" /><br />
+        <label>Password : </label>
+        <input type="password" name="password" class="auth_user_info" /><br />
+        <button type="button" onclick="login()">OK</button>
+        <button type="button" onclick="hideloginbox()">CANCEL</button>
+    </form>
+</div>
+<div id="background">
+    <div id="logo_frame">
+        <div id="logo">Let's be professional</div>
+        <div id="signup"><a href="#" class="login_link">SIGNUP</a></div>
+        <div id="login"><a href="#" onclick="showlogin()" class="login_link">LOGIN</a></div>
+        <img id="glasses_laptop" src="../images/img-0001.jpg" />
+        <div id="extblock1"></div>
+    </div>
+    <div id="bottom_bar">This is the result of a team project. Team Members : Blair, Richard, Bruce</div>
+</div>
+</body>
+</html>

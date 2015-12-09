@@ -1,0 +1,42 @@
+
+#background_screen {
+    position: fixed;
+    background-image: url("../../images/img-0002-2.png");
+    width: 100%;
+    height: 100%;/*
+    -moz-filter: blur(5px) brightness(90%);;
+    -webkit-filter: blur(5px) brightness(90%);*/
+    z-index: 0;
+}
+
+#signinform {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    z-index: 10;
+}
+
+#signinform input {
+    width: 100%;
+    font-size: 30px;
+}
+
+#signinform td {
+    padding-top: 20px;
+}
+
+.form_name {
+    border-right: dotted 2px;
+    vertical-align: text-top;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: Abel;
+}
+
+.form_col {
+    text-align: right;
+    font-family: Abel;
+    font-size: 20px;
+}

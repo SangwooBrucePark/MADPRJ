@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME (P-0101)</title>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/common.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/home.html.js"></script>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type='text/css' />
+    <link type="text/css" rel="stylesheet" href="../resources/css/home.html.css" />
+</head>
+<body onload="onload_proc()" onresize="onresize_proc()">
+<div id="background_screen"></div>
+<div id="challenge">THE CHALLENGE<br />TO BE PROFESSIONAL</div>
+<div id="menubar"><table id="menubar_items"></table></div>
+<div id="starttest">
+    <a href="category.html">
+        <img src="../images/img-0004.png" />
+        <div style="color: black; font-weight: bolder; text-decoration: none;">Let's Start</div>
+    </a>
+</div>
+<table id="monitor">
+    <tr>
+        <td><div id="numcategories">
+            <div class="monitor_text" id="numcategories_val"></div>
+            <div class="monitor_subtext">Categories</div>
+        </div></td>
+        <td><div id="numquestions">
+            <div class="monitor_text" id="numquestions_val"></div>
+            <div class="monitor_subtext">Questions</div>
+        </div></td>
+        <td><div id="nummembers">
+            <div class="monitor_text" id="nummembers_val"></div>
+            <div class="monitor_subtext">Members</div>
+        </div></td>
+    </tr>
+</table>
+<div id="login_window">
+    <form id="form_auth_info" method="post" action="../php/letmein.php">
+        <table>
+            <tr>
+                <td>E-mail : </td>
+                <td><input id="login_email" type="email" name="email" /></td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td><input type="password" name="password" onkeypress="passwordkeydown(event)"/></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-top: 10px; text-align: center;">
+                    <button type="button" onclick="login()">OK</button>
+                    <button type="button" onclick="login_cancel()">CANCEL</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div id="loading">
+    <img src="../images/img-0003.gif" />
+</div>
+<div id="monitor_loading">
+    <img src="../images/img-0003.gif" />
+</div>
+<div id="messagebox"></div>
+<div id="blocking"></div>
+</body>
+</html>

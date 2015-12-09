@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/common.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/admin_question.html.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/admin_common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/admin_common.css" />
+    <style type="text/css" rel="stylesheet">
+        .question_table {
+            margin-top: 10px;
+            border: solid 1px;
+            width: 800px;
+            font-size: 20px;
+            border-collapse: collapse;
+        }
+
+        .question_table th {
+            border: dotted 1px;
+            color: #ffffff;
+            padding: 3px;
+            background-color: #444352;
+        }
+
+        .question_table td {
+            border: dotted 1px;
+            padding: 3px;
+        }
+
+        .dmwindow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            border: solid 1px;
+            border-radius: 50px;
+            padding: 50px;
+            visibility: hidden;
+        }
+
+        .dmwindow table {
+            width: 600px;
+        }
+
+        .dmwindow td {
+            height: 60px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .dmwindow .col {
+            width: 200px;
+            text-align: right;
+        }
+
+        .dmwindow input {
+            font-size: 30px;
+            width: 100%;
+        }
+
+        .dmwindow textarea {
+            font-size: 30px;
+            width: 100%;
+            height: 200px;
+        }
+
+        .dmwindow button {
+            width: 49%;
+            height: 40px;
+            font-size: 30px;
+        }
+
+        .dmwindow select {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body onload="onload_proc()">
+<div id="menu"></div>
+<img src="../images/img-0003.gif" class="loading" />
+<div class="actual_field">
+    <select id="category_list"></select>
+    <button type="button" onclick="getquestions()">Search</button>
+    <button type="button" onclick="showaddwindow(true)">Add Question</button>
+    <table class="question_table">
+        <thead>
+        <th>Question ID</th>
+        <th>Question</th>
+        <th>Modify</th>
+        <th>Disable</th>
+        </thead>
+        <tbody id="questions"></tbody>
+    </table>
+</div>
+<div class="dmwindow" id="modify_window">
+    <form action="../php/admin_modifyquestion.php" method="post" id="upquestion_form">
+    <table>
+        <tr>
+            <td class="col">Question ID : </td>
+            <td><input type="text" name="qid" id="qid" readonly /></td>
+        </tr>
+        <tr>
+            <td class="col">Question : </td>
+            <td><textarea name="question" id="question"></textarea></td>
+        </tr>
+        <tr>
+            <td class="col">Answer : </td>
+            <td><input type="text" name="option1" id="option1" /></td>
+        </tr>
+        <tr>
+            <td class="col">Option 1 : </td>
+            <td><input type="text" name="option2" id="option2" /></td>
+        </tr>
+        <tr>
+            <td class="col">Option 2 : </td>
+            <td><input type="text" name="option3" id="option3" /></td>
+        </tr>
+        <tr>
+            <td class="col">Option 3 : </td>
+            <td><input type="text" name="option4" id="option4" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="submitmodify()">OK</button>
+                <button type="button" onclick="cancelmodifywindow()">CANCEL</button>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+<div class="dmwindow" id="add_window">
+    <form action="../php/admin_addquestion.php" method="post" id="addquestion_form">
+        <table>
+            <tr>
+                <td class="col">Category : </td>
+                <td><select id="add_category_list"></select></td>
+            </tr>
+            <tr>
+                <td class="col">Question : </td>
+                <td><textarea name="question" id="add_question"></textarea></td>
+            </tr>
+            <tr>
+                <td class="col">Answer : </td>
+                <td><input type="text" name="option1" id="add_option1" /></td>
+            </tr>
+            <tr>
+                <td class="col">Option 1 : </td>
+                <td><input type="text" name="option2" id="add_option2" /></td>
+            </tr>
+            <tr>
+                <td class="col">Option 2 : </td>
+                <td><input type="text" name="option3" id="add_option3" /></td>
+            </tr>
+            <tr>
+                <td class="col">Option 3 : </td>
+                <td><input type="text" name="option4" id="add_option4" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="submitadd()">OK</button>
+                    <button type="button" onclick="canceladdwindow()">CANCEL</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

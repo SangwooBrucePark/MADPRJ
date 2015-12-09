@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CATEGORY (P-0303)</title>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/common.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/category.html.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../resources/css/category.html.css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet" type="text/css" />
+</head>
+<body onload="onload_proc()" onresize="onresize_proc()">
+<div id="head">
+    <div id="head_image"><img src="../images/img-0002-3.png" /></div>
+    <div id="page_title">Select category</div>
+    <div id="gohome"><a href="home.html" style="font-size: 20px;">HOME</a></div>
+</div>
+<div id="selection_body">
+    <table style="position: relative; top: 30px; width: 100%;">
+        <tr>
+            <td style="vertical-align: top;">
+                <div class="category_head">Categories</div>
+                <div id="category_list">
+                </div>
+            </td>
+            <td style="vertical-align: top;">
+                <div class="category_head">Chosen Category</div>
+                <div id="chosen_category">
+                </div>
+                <div style="position: relative; text-align: center; top: 100px;">
+                    <a href="#" onclick="preparequestions()">
+                        <img style="width: 100px;" src="../images/img-0009.png" /><br />
+                        <p style="text-shadow: 0px 0px 20px #000000; font-size: 30px; font-family: Abel; color: #000000;">Test Start</p>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="loading">
+    <img src="../images/img-0003.gif" />
+</div>
+<div id="messagebox"></div>
+<div id="blocking"></div>
+</body>
+</html>

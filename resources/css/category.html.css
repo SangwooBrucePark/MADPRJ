@@ -1,0 +1,175 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#head {
+    position: fixed;
+    height: 200px;
+    width: 100%;
+    background-color: #878c8c;
+    z-index: 3;
+}
+
+#head_image {
+    position: fixed;
+    margin: 0px auto 0px auto;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    width: 1000px;
+    height: 200px;
+    overflow: hidden;
+}
+
+
+#head_image img {
+    transform: translate(0px, -100px);
+    /*-webkit-filter: blur(2px) sepia(60%) brightness(60%);*/
+}
+
+#page_title {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-130%, 0px);
+    color: #ffffff;
+    text-shadow: 1px 1px 20px #000000;
+    font-family: Abel;
+    font-size: 50px;
+    z-index: 3;
+}
+
+#gohome {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translate(980%, 0px);
+    color: #ffffff;
+    text-shadow: 1px 1px 20px #000000;
+    font-family: Abel;
+    font-size: 25px;
+    z-index: 3;
+}
+
+#selection_body {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 1000px;
+    height: 600px;
+    transform: translate(-50%, 0px);
+    border: dotted 1px;
+}
+
+body {
+    background-color: #deded0;
+    background-image: url("../../images/img-0010.png");
+}
+
+#category_list {
+    position: relative;
+    left: 100px;
+    width: 320px;
+    max-height: 450px;
+    overflow-scrolling: auto;
+    overflow: auto;
+}
+
+.category_head {
+    position: relative;
+    left: 100px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: Abel;
+}
+
+#chosen_category {
+    position: relative;
+    left: 50px;
+    width: 380px;
+    border: dotted 5px #6d6dc8;
+    background-color: rgba(100, 100, 100, 0.2);
+    padding: 20px 20px 20px 20px;
+    height: 60px;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius:20px;
+}
+
+.category_item {
+    width: 250px;
+    height: 20px;
+    margin: 0px 0px 5px 0px;
+    padding: 5px 10px 5px 30px;
+    -moz-box-shadow:inset 0px 0px 14px -3px #f2fadc;
+    -webkit-box-shadow:inset 0px 0px 14px -3px #f2fadc;
+    box-shadow:inset 0px 0px 14px -3px #f2fadc;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbe6c4), color-stop(1, #9ba892));
+    background:-moz-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+    background:-webkit-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+    background:-o-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+    background:-ms-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+    background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbe6c4', endColorstr='#9ba892',GradientType=0);
+    background-color:#dbe6c4;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    border:1px solid #b2b8ad;
+    display:inline-block;
+    cursor:pointer;
+    color:#757d6f;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ced9bf;
+}
+
+.selected_category_item {
+    width: 330px;
+    height: 35px;
+    margin: 0px;
+    -moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+    background:-moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background:-webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background:-o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background:-ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+    background-color:#bddbfa;
+    -moz-border-radius:23px;
+    -webkit-border-radius:23px;
+    border-radius:23px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+    padding: 15px 10px 5px 30px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528ecc;
+}
+
+.category_item_plus {
+    position: absolute;
+    width: 15px;
+    left: 260px;
+    margin-top: 3px;
+}
+
+.category_item_minus {
+    position: absolute;
+    width: 25px;
+    left: 345px;
+}

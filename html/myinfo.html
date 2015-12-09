@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MYINFO (P-0201)</title>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/common.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/myinfo.html.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../resources/css/myinfo.html.css" />
+</head>
+<body onload="onload_proc()" onresize="onresize_proc()">
+<div id="background_screen">
+    <img src="../images/img-0025-1.png" id="background_screen_img"/>
+</div>
+<div id="menubar"><table id="menubar_items"></table></div>
+<form id="changeinfo" action="../php/modifyuserinfo.php" method="post">
+    <table id="changeinfoform">
+        <tr>
+            <td rowspan="8" class="form_name"><br/>Update<br />Your<br />Information</td>
+            <td class="form_col" style="height: 20px;"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="form_col">E-mail (ID) :</td>
+            <td id="email" class="form_value"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="form_col">New Password :</td>
+            <td class="form_value"><button type="button" style="width: 150px; font-size: 18px;" onclick="showpasswordchange()">Password Change</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="form_col">First Name :</td>
+            <td id="fname" class="form_value"></td>
+            <td><input type="checkbox" onchange="setchangetarget('fname')" id="fname_chk"/></td>
+        </tr>
+        <tr>
+            <td class="form_col">Last Name :</td>
+            <td id="lname" class="form_value"></td>
+            <td><input type="checkbox" onchange="setchangetarget('lname')" id="lname_chk"/></td>
+        </tr>
+        <tr>
+            <td class="form_col">Phone Number :</td>
+            <td id="phonenumber" class="form_value"></td>
+            <td><input type="checkbox" onchange="setchangetarget('phonenumber')" id="phonenumber_chk" /></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="form_col" style="height: 150px; text-align: center;">
+                <button type="button" onclick="modifyuserinfo()" style="font-size: 30px; width: 200px; font-family: Abel;">Modify</button>
+                <button type="reset" onclick="initUserInfo()" style="font-size: 30px; width: 200px; font-family: Abel;">Reset</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+<div id="loading">
+    <img src="../images/img-0003.gif" />
+</div>
+<div id="messagebox"></div>
+<div id="blocking"></div>
+<div id="passwordchange_block">
+    <div id="passwordchange">
+        <table>
+            <tr>
+                <td class="pwd_col">Current Password</td>
+                <td class="pwd_sep">:</td>
+                <td class="pwd_val"><input type="password" id="curpassword" /></td>
+            </tr>
+            <tr>
+                <td class="pwd_col">New Password</td>
+                <td class="pwd_sep">:</td>
+                <td class="pwd_val"><input type="password" id="newpassword" /></td>
+            </tr>
+            <tr>
+                <td class="pwd_col">Confirm Password</td>
+                <td class="pwd_sep">:</td>
+                <td class="pwd_val"><input type="password" id="conpassword" onkeyup="checknewpassword()" /></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="button" onclick="passwordchange_submit()">Submit</button>
+                    <button type="button" onclick="passwordchange_cancel()">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

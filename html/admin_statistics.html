@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/common.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/admin_statistics.html.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/admin_common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/admin_common.css" />
+    <style type="text/css" rel="stylesheet">
+        .actual_field table {
+            width: 800px;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .actual_field th {
+            background-color: #80b5ea;
+            font-size: 20px;
+            border: solid 1px;
+        }
+
+        .actual_field td {
+            font-size: 20px;
+            height: 30px;
+            border: dotted 1px;
+        }
+
+        .actual_field hr {
+            margin-bottom: 30px;
+        }
+
+        .current_user {
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .section_title {
+            font-size: 30px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body onload="onload_proc()">
+<img src="../images/img-0003.gif" class="loading" />
+<div id="menu"></div>
+<div class="actual_field">
+    <div class="section_title">Overall Statistics</div>
+    <table>
+        <thead>
+            <th>Total</th>
+            <th>Passes</th>
+            <th>Failed</th>
+            <th>Highest Score</th>
+            <th>Lowest Score</th>
+            <th>Average</th>
+        </thead>
+        <tbody id="statistics_val">
+        </tbody>
+    </table>
+    <hr />
+    <div class="current_user">
+        Current Number of Users : <span id="curusernum"></span>
+        <span id="updatecurusers" style="font-size: 20px"></span>
+    </div>
+    <hr />
+    <div class="section_title">Daily Reports</div>
+    <table>
+        <thead>
+        <th>Date</th>
+        <th>Pass</th>
+        <th>Fail</th>
+        <th>Highest</th>
+        <th>Lowest</th>
+        <th>Average</th>
+        </thead>
+        <tbody id="detailreport_val">
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/common.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/admin_category.html.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/admin_common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/admin_common.css" />
+    <style rel="stylesheet" type="text/css">
+        .user_table {
+            margin-top: 10px;
+            border: solid 1px;
+            width: 800px;
+            font-size: 20px;
+            border-collapse: collapse;
+        }
+
+        .user_table th {
+            border: dotted 1px;
+            color: #ffffff;
+            padding: 3px;
+            background-color: #444352;
+        }
+
+        .user_table td {
+            border: dotted 1px;
+            padding: 3px;
+        }
+
+        .dmwindow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            border: solid 1px;
+            border-radius: 50px;
+            padding: 50px;
+            visibility: hidden;
+        }
+
+        .dmwindow table {
+            width: 600px;
+        }
+
+        .dmwindow td {
+            height: 60px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .dmwindow .col {
+            width: 200px;
+            text-align: right;
+        }
+
+        .dmwindow input {
+            font-size: 30px;
+            width: 100%;
+        }
+
+        .dmwindow button {
+            width: 49%;
+            height: 40px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body onload="onload_proc()">
+<img src="../images/img-0003.gif" class="loading" />
+<div id="menu"></div>
+<div class="actual_field">
+    <button type="button" onclick="showaddwindow(true)">Add Category</button>
+    <table class="user_table">
+        <thead>
+        <th>Category ID</th>
+        <th>Category Name</th>
+        <th>Description</th>
+        <th style="width: 60px;">Modify</th>
+        <th style="width: 60px;">Disable</th>
+        </thead>
+        <tbody id="categories"></tbody>
+    </table>
+</div>
+<div class="dmwindow" id="modify_window">
+    <table>
+        <tr>
+            <td class="col">Category ID : </td>
+            <td id="modify_cid"></td>
+        </tr>
+        <tr>
+            <td class="col">Category Name : </td>
+            <td><input type="text" id="modify_new_category_name" /></td>
+        </tr>
+        <tr>
+            <td class="col">Description : </td>
+            <td><input type="text" id="modify_new_description" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="submitmodify()">OK</button>
+                <button type="button" onclick="cancelmodifywindow()">CANCEL</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="dmwindow"id="add_window">
+    <table>
+        <tr>
+            <td class="col">Category Name : </td>
+            <td><input type="text" id="add_new_category_name" /></td>
+        </tr>
+        <tr>
+            <td class="col">Description : </td>
+            <td><input type="text" id="add_new_description" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="submitadd()">OK</button>
+                <button type="button" onclick="canceladdwindow()">CANCEL</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

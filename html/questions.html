@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUESTIONS (P-0401)</title>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/questions.html.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../resources/css/questions.html.css" />
+</head>
+<body onload="onload_proc()" onresize="onresize_proc()">
+<div id="background_screen"></div>
+<div id="question_field">
+    <img id="question_field_bg" src="../images/img-0013-2.png" />
+    <div id="question_area">
+        <div id="head">
+            <table>
+                <tr>
+                    <td style="width: 100px;">Category :</td>
+                    <td id="category_name" style="font-size: 25px;"></td>
+                    <td style="width: 100px;">Progress :</td>
+                    <td id="progress" style="text-align: left; width: 50px"></td>
+                    <td style="width: 100px;">Time Limit :</td>
+                    <td style="width: 100px;"><progress id="progbar" value="22" max="200"></progress></td>
+                    <td id="timerview" style="font-size: 30px; width: 120px;">00:00</td>
+                </tr>
+            </table>
+        </div>
+        <table id="question_answer">
+            <tr>
+                <td id="question"></td>
+            </tr>
+            <tr>
+                <td id="answer">
+                    <form method="post" action="../php/answerquestion.php" id="user_choice">
+                        <input type="radio" name="user_answer" value="" /><label name="user_answer_label"></label><br />
+                        <input type="radio" name="user_answer" value="" /><label name="user_answer_label"></label><br />
+                        <input type="radio" name="user_answer" value="" /><label name="user_answer_label"></label><br />
+                        <input type="radio" name="user_answer" value="" /><label name="user_answer_label"></label>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <img src="../images/img-0014.png" id="gonext" onclick="movenextquestion()" />
+        <div id="foot"></div>
+    </div>
+</div>
+<div id="loading">
+    <img src="../images/img-0003.gif" />
+</div>
+<div id="messagebox"></div>
+<div id="blocking"></div>
+</body>
+</html>

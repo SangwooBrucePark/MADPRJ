@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGNUP (P-0102)</title>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/common.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/signup.html.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
+    <link type="text/css" rel="stylesheet" href="../resources/css/signup.html.css" />
+</head>
+<body onload="onload_proc()" onresize="onresize_proc()">
+<div id="background_screen"></div>
+<div id="menubar"><table id="menubar_items"></table></div>
+<form id="signininfo" action="../php/signup.php" method="post">
+    <table id="signinform">
+        <tr>
+            <td rowspan="8" class="form_name"><br/>User<br />Information<br />Sign up</td>
+            <td class="form_col" style="height: 20px;"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="form_col">E-mail (ID) :</td>
+            <td><input type="email" name="email" id="email"/></td>
+        </tr>
+        <tr>
+            <td class="form_col">New Password :</td>
+            <td><input type="password" name="password" id="newpassword" /></td>
+        </tr>
+        <tr>
+            <td class="form_col">Confirm Password :</td>
+            <td><input type="password" onkeyup="matchnewpassword()" id="cpassword" /></td>
+        </tr>
+        <tr>
+            <td class="form_col">First Name :</td>
+            <td><input type="text" name="fname" /></td>
+        </tr>
+        <tr>
+            <td class="form_col">Last Name :</td>
+            <td><input type="text" name="lname" /></td>
+        </tr>
+        <tr>
+            <td class="form_col">Phone Number :</td>
+            <td><input type="tel" name="phonenumber" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="form_col" style="height: 150px; text-align: center;">
+                <button type="button" onclick="submitsignup()" style="font-size: 30px; width: 200px; font-family: Abel;">Submit</button>
+                <button type="reset" onclick="setfieldclear()" style="font-size: 30px; width: 200px; font-family: Abel;">Reset</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<div id="loading">
+    <img src="../images/img-0003.gif" />
+</div>
+<div id="messagebox"></div>
+<div id="blocking"></div>
+</body>
+</html>

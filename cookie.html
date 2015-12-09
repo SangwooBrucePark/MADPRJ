@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Check</title>
+    <script type="text/javascript" language="JavaScript" src="./js/bruce_datatrans.js"></script>
+    <script type="text/javascript" language="JavaScript" src="./js/bruce_jssimple.js"></script>
+    <script type="text/javascript" language="JavaScript" src="./js/bruce_cookiecrumbles.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        var url = "./receivedata.php";
+
+        function ajax_callback(responseText) {
+            var resp = JSON.parse(responseText);
+            id("retData").innerText = decodeURIComponent(resp.key);
+        }
+
+        function submit() {
+            ajax_datatrans(url, "p=" + btoa(json_serialize("test_form")), ajax_callback);
+        }
+
+        function cookieset() {
+            setCookie(id("test_form").key.value, id("test_form").value.value, 1);
+        }
+
+        function cookiedel() {
+            delCookie(id("test_form").key.value);
+        }
+
+        function cookieget() {
+            alert(getCookie(id("test_form").key.value));
+        }
+
+        function cookieshow() {
+            id("decodedCookie").innerHTML = decodeURIComponent(document.cookie).replace(/; /g, "<br />");
+        }
+    </script>
+</head>
+<body>
+<div id="decodedCookie"></div>
+<form id="test_form">
+
+    <a href="#" onclick="cookieshow()">Show All Cookies</a><br />
+    <br />
+    Key : <input type="text" name="key" /><br />
+    Value : <input type="text" name="value" /><br />
+    <a href="#" onclick="cookieset()">Set Cookie</a><br />
+    <a href="#" onclick="cookiedel()">Delete Cookie</a><br />
+    <a href="#" onclick="cookieget()">Get Cookie</a>
+</form>
+</body>
+</html>
