@@ -5,7 +5,6 @@
 var requestnumofcategoriesURL = "../php/getnumofcategories.php";
 var requestnumofmembersURL = "../php/getnumofmembers.php";
 var requestnumofquestionsURL = "../php/getnumofquestions.php";
-var updatefreq = 0.1; // minute
 
 function onload_proc() {
     setUserNameOnPage();

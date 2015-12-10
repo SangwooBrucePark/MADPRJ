@@ -44,15 +44,17 @@
     <form id="form_auth_info" method="post" action="../php/letmein.php">
         <table>
             <tr>
-                <td>E-mail : </td>
+                <td style="text-align: left">E-mail</td>
+                <td>:</td>
                 <td><input id="login_email" type="email" name="email" /></td>
             </tr>
             <tr>
-                <td>Password : </td>
+                <td style="text-align: left">Password</td>
+                <td>:</td>
                 <td><input type="password" name="password" onkeypress="passwordkeydown(event)"/></td>
             </tr>
             <tr>
-                <td colspan="2" style="padding-top: 10px; text-align: center;">
+                <td colspan="3" style="padding-top: 10px; text-align: center;">
                     <button type="button" onclick="login()">OK</button>
                     <button type="button" onclick="login_cancel()">CANCEL</button>
                 </td>

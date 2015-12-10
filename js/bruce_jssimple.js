@@ -22,7 +22,7 @@ function json_serialize(form_tag_id) {
     var ret_val = "{";
     var frm = id(form_tag_id);
     for (var i = 0; i < frm.length; i++) {
-        ret_val += "\"" + frm.elements[i].name + "\":\"" + encodeURIComponent(frm.elements[i].value) + "\"";
+        ret_val += "\"" + frm.elements[i].name + "\":\"" + frm.elements[i].value + "\"";
         if (i < frm.length - 1) {
             ret_val += ",";
         }

@@ -6,9 +6,7 @@ function setCookie(cname, cvalue) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 
-    var expires = 0;//"expires=" + d.toUTCString();
-    //document.cookie = encodeURIComponent(cname) + "=" + encodeURIComponent(cvalue) + "; " + expires + "; path=/";
-    document.cookie = encodeURIComponent(cname) + "=" + encodeURIComponent(cvalue) + "; null; path=/";
+    document.cookie = cname + "=" + cvalue + "; null; path=/";
 }
 
 function getCookie(cname) {
@@ -22,7 +20,7 @@ function getCookie(cname) {
         }
 
         if (c.indexOf(name) == 0) {
-            return decodeURIComponent(c.substring(name.length,c.length));
+            return c.substring(name.length,c.length);
         }
     }
 
@@ -32,5 +30,5 @@ function getCookie(cname) {
 function delCookie(cname) {
     var expireDate = new Date();
     expireDate.setDate(expireDate.getDate() - 1);
-    document.cookie = encodeURIComponent(cname) + "= " + "; expires=" + expireDate.toGMTString() + "; path=/";
+    document.cookie = cname + "= " + "; expires=" + expireDate.toGMTString() + "; path=/";
 }
