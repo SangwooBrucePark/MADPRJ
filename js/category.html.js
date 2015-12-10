@@ -85,7 +85,7 @@ function addlist() {
 
 function preparequestions() {
     if (selected_cid != "") {
-        var p = btoa(JSON.stringify({"cid":selected_cid}));
+        var p = b64(JSON.stringify({"cid":selected_cid}));
         doloadingscreen(true);
         ajax_datatrans(preparequestions_url, "p=" + p, preparequestions_callback);
     }

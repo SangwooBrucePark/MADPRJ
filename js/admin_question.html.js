@@ -40,7 +40,7 @@ function getcategories_callback(responseText) {
 
 function getquestions() {
     showloading(true);
-    var req_val = btoa(JSON.stringify({"cid":id("category_list").value}));
+    var req_val = b64(JSON.stringify({"cid":id("category_list").value}));
     ajax_datatrans(requestquestionsURL, "p=" + req_val, getquestions_callback);
 }
 
@@ -75,7 +75,7 @@ function modifyquestion(qid) {
     showloading(true);
     modified_qid = qid;
 
-    var req_val = btoa(JSON.stringify({"qid":id("category_list").value}));
+    var req_val = b64(JSON.stringify({"qid":id("category_list").value}));
     ajax_datatrans(requestquestionURL, "p=" + req_val, modifyquestion_callback);
 }
 
@@ -111,7 +111,7 @@ function cancelmodifywindow() {
 }
 
 function disablequestion(qid) {
-    var req_val = btoa(JSON.stringify({"qid":qid}));
+    var req_val = b64(JSON.stringify({"qid":qid}));
     ajax_datatrans(requestdiablequestionURL, "p=" + req_val, disablequestion_callback);
 }
 
@@ -131,7 +131,7 @@ function submitmodify() {
     modifiedquestion["option3"] = id("option3").value;
     modifiedquestion["option4"] = id("option4").value;
 
-    var req_val = btoa(JSON.stringify(modifiedquestion));
+    var req_val = b64(JSON.stringify(modifiedquestion));
     ajax_datatrans(requestmodifyquestionURL, "p=" + req_val, submitmodify_callback);
 }
 
@@ -183,7 +183,7 @@ function submitadd() {
     newquestion["option3"] = id("add_option3").value;
     newquestion["option4"] = id("add_option4").value;
 
-    var req_val = btoa(JSON.stringify(newquestion));
+    var req_val = b64(JSON.stringify(newquestion));
     ajax_datatrans(requestaddquestionURL, "p=" + req_val, submitadd_callback);
 }
 

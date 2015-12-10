@@ -77,7 +77,7 @@ function timer() {
 
         // 답변 제출
         doloadingscreen(true);
-        var p = btoa(JSON.stringify(user_answer_pkg));
+        var p = b64(JSON.stringify(user_answer_pkg));
         ajax_datatrans(answerQuestionURL, "p=" + p, answerQuestion_callback);
     } else {
         var sec = parseInt(timelimit_mil / 100);
@@ -135,7 +135,7 @@ function nextquestion_callback() {
 function requestQuestion(qnum) {
     doloadingscreen(true);
 
-    var p = btoa(JSON.stringify({"qnum":cur_question_number}));
+    var p = b64(JSON.stringify({"qnum":cur_question_number}));
     ajax_datatrans(requestQuestionURL, "p=" + p, requestQuestion_callback);
 }
 

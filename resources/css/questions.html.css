@@ -58,6 +58,8 @@ body {
     width: 1000px;
     height: 50px;
     box-shadow: 1px 1px 20px #000000;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 1px 1px 20px #000000;
     background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -110,6 +112,8 @@ body {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.4);
     box-shadow: -1px 0px 10px #000000;
+    -webkit-appearance: none;
+    -webkit-box-shadow: -1px 0px 10px #000000;
 }
 
 .moveicon {
@@ -118,8 +122,8 @@ body {
     margin-left: 3px;
     margin-bottom: 2px;
     padding:6px 24px;
-
     -moz-box-shadow:inset 0px 0px 14px -3px #f2fadc;
+    -webkit-appearance: none;
     -webkit-box-shadow:inset 0px 0px 14px -3px #f2fadc;
     box-shadow:inset 0px 0px 14px -3px #f2fadc;
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbe6c4), color-stop(1, #9ba892));

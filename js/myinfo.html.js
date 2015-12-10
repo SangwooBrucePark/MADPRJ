@@ -71,7 +71,7 @@ function modifyuserinfo() {
         updateddata.phonenumber = getCookie("phonenumber");
     }
 
-    ajax_datatrans(requestModifyURL, "p=" + btoa(JSON.stringify(updateddata)), modifyuserinfo_callback);
+    ajax_datatrans(requestModifyURL, "p=" + b64(JSON.stringify(updateddata)), modifyuserinfo_callback);
 }
 
 function modifyuserinfo_callback(responseText) {
@@ -145,7 +145,7 @@ function passwordchange_submit() {
 
     var passwords = {"old_password":id("curpassword").value , "new_password":id("newpassword").value};
     doloadingscreen(true);
-    ajax_datatrans(requestPasswordURL, "p=" + btoa(JSON.stringify(passwords)), passwordchange_submit_callback);
+    ajax_datatrans(requestPasswordURL, "p=" + b64(JSON.stringify(passwords)), passwordchange_submit_callback);
 }
 
 function passwordchange_submit_callback(responseText) {

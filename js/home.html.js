@@ -26,7 +26,7 @@ function setGraphicalElements() {
 }
 
 function login() {
-    ajax_datatrans(id("form_auth_info").action, "p=" + btoa(json_serialize("form_auth_info")), login_callback);
+    ajax_datatrans(id("form_auth_info").action, "p=" + b64(json_serialize("form_auth_info")), login_callback);
     doloadingscreen(true);
 }
 

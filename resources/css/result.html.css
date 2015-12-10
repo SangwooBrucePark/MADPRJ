@@ -8,12 +8,6 @@
     overflow: hidden;
 }
 
-#background_screen img {/*
-    -moz-filter: brightness(80%) sepia(60%);
-    -webkit-filter: brightness(80%) sepia(60%);
-    filter: brightness(80%) sepia(60%);*/
-}
-
 #report_field {
     position: absolute;
     top: 30%;
@@ -30,6 +24,8 @@
     height: 100%;
     opacity: 0.8;
     box-shadow: 10px 10px 100px #000000;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 10px 10px 100px #000000;
 }
 
 #title {

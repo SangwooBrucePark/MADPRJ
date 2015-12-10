@@ -7,7 +7,7 @@ var requestLoginURL = "../php/admin_letmein.php";
 function login() {
     showloading(true);
     var logininfo = {"email":id("email").value, "password":id("password").value};
-    ajax_datatrans(requestLoginURL, "p=" + btoa(JSON.stringify(logininfo)), login_callback);
+    ajax_datatrans(requestLoginURL, "p=" + b64(JSON.stringify(logininfo)), login_callback);
 }
 
 function login_callback(responseText) {

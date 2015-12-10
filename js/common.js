@@ -94,3 +94,7 @@ function getClientWidth() {
 
     return ret;
 }
+
+function b64(msg) {
+    return btoa(msg);
+}

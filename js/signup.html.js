@@ -23,13 +23,17 @@ function setGraphicalElements() {
 function matchnewpassword() {
     if (id("newpassword").value == id("cpassword").value) {
         id("newpassword").style.cssText += "box-shadow: 0px 0px 20px #00ff00;";
+        id("newpassword").style.cssText += "-webkit-box-shadow: 0px 0px 20px #00ff00;";
         id("newpassword").style.cssText += "background-color: #00ff00;";
         id("cpassword").style.cssText += "box-shadow: 0px 0px 20px #00ff00;";
+        id("cpassword").style.cssText += "-webkit-box-shadow: 0px 0px 20px #00ff00;";
         id("cpassword").style.cssText += "background-color: #00ff00;";
     } else {
         id("newpassword").style.cssText += "box-shadow: 0px 0px 20px #ff0000;";
+        id("newpassword").style.cssText += "-webkit-box-shadow: 0px 0px 20px #ff0000;";
         id("newpassword").style.cssText += "background-color: #ff0000;";
         id("cpassword").style.cssText += "box-shadow: 0px 0px 20px #ff0000;";
+        id("cpassword").style.cssText += "-webkit-box-shadow: 0px 0px 20px #ff0000;";
         id("cpassword").style.cssText += "background-color: #ff0000;";
     }
 }
@@ -37,6 +41,10 @@ function matchnewpassword() {
 function setfieldclear() {
     id("newpassword").style.removeProperty("box-shadow");
     id("cpassword").style.removeProperty("box-shadow");
+    id("newpassword").style.removeProperty("-webkit-box-shadow");
+    id("cpassword").style.removeProperty("-webkit-box-shadow");
+    id("newpassword").style.cssText += "background-color: #ffffff;";
+    id("cpassword").style.cssText += "background-color: #ffffff;";
 }
 
 var login_info = {"email":"", "password":""};
@@ -54,7 +62,7 @@ function submitsignup() {
 
     var p = json_serialize("signininfo");
     var url = id("signininfo").action;
-    ajax_datatrans(url, "p=" + btoa(p), submitsignup_callback);
+    ajax_datatrans(url, "p=" + b64(p), submitsignup_callback);
 }
 
 function submitsignup_callback(responseText) {
@@ -71,7 +79,7 @@ function submitsignup_callback(responseText) {
 function login() {
     hidemessagebox();
     doloadingscreen(true);
-    ajax_datatrans("../php/letmein.php", "p=" + btoa(JSON.stringify(login_info)), login_callback);
+    ajax_datatrans("../php/letmein.php", "p=" + b64(JSON.stringify(login_info)), login_callback);
 }
 
 function login_callback(responseText) {

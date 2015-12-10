@@ -74,7 +74,7 @@ function modifycategory(cid) {
 }
 
 function disablecategory(cid) {
-    var req_val = btoa(JSON.stringify({"cid":cid}));
+    var req_val = b64(JSON.stringify({"cid":cid}));
     ajax_datatrans(requestdisablecategoryURL, req_val, moddisablecategory_callback);
 }
 
@@ -93,7 +93,7 @@ function submitmodify() {
     updatedcategory.category_name = id("modify_new_category_name").value;
     updatedcategory.description = id("modify_new_description").value;
 
-    var req_val = btoa(JSON.stringify(updatedcategory));
+    var req_val = b64(JSON.stringify(updatedcategory));
 
     ajax_datatrans(requestmodifycategoryURL, "p=" + req_val, moddisablecategory_callback);
 }
@@ -107,7 +107,7 @@ function submitadd() {
     req_val.category_name = id("add_new_category_name").value;
     req_val.description = id("add_new_description").value;
 
-    var req_val = btoa(JSON.stringify(updatedcategory));
+    var req_val = b64(JSON.stringify(updatedcategory));
 
     ajax_datatrans(requestaddcategoryURL, "p=" + req_val, moddisablecategory_callback);
 }

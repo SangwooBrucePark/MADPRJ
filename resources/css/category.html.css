@@ -47,8 +47,8 @@ body {
 #gohome {
     position: absolute;
     top: 160px;
-    left: 50%;
-    transform: translate(980%, 0px);
+    right: 20px;
+    /*transform: translate(80%, 0px);*/
     color: #ffffff;
     text-shadow: 1px 1px 20px #000000;
     font-family: Abel;
@@ -107,6 +107,7 @@ body {
     margin: 0px 0px 5px 0px;
     padding: 5px 10px 5px 30px;
     -moz-box-shadow:inset 0px 0px 14px -3px #f2fadc;
+    -webkit-appearance: none;
     -webkit-box-shadow:inset 0px 0px 14px -3px #f2fadc;
     box-shadow:inset 0px 0px 14px -3px #f2fadc;
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbe6c4), color-stop(1, #9ba892));
@@ -136,6 +137,7 @@ body {
     height: 35px;
     margin: 0px;
     -moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    -webkit-appearance: none;
     -webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
     box-shadow:inset 0px 1px 0px 0px #dcecfb;
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));

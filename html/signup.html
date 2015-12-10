@@ -18,13 +18,13 @@
 <form id="signininfo" action="../php/signup.php" method="post">
     <table id="signinform">
         <tr>
-            <td rowspan="8" class="form_name"><br/>User<br />Information<br />Sign up</td>
-            <td class="form_col" style="height: 20px;"></td>
+            <td rowspan="8" class="form_name"><br />User<br />Information<br />Sign up</td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <td class="form_col">E-mail (ID) :</td>
-            <td><input type="email" name="email" id="email"/></td>
+            <td><input type="text" name="email" id="email" /></td>
         </tr>
         <tr>
             <td class="form_col">New Password :</td>
@@ -47,7 +47,7 @@
             <td><input type="tel" name="phonenumber" /></td>
         </tr>
         <tr>
-            <td colspan="2" class="form_col" style="height: 150px; text-align: center;">
+            <td colspan="2" style="text-align: center; height: 150px;">
                 <button type="button" onclick="submitsignup()" style="font-size: 30px; width: 200px; font-family: Abel;">Submit</button>
                 <button type="reset" onclick="setfieldclear()" style="font-size: 30px; width: 200px; font-family: Abel;">Reset</button>
             </td>
