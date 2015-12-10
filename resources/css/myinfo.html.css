@@ -8,12 +8,6 @@
     overflow: hidden;
 }
 
-#background_screen img {/*
-    -moz-filter: brightness(80%) sepia(60%);
-    -webkit-filter: brightness(80%) sepia(60%);
-    filter: brightness(80%) sepia(60%);*/
-}
-
 #changeinfoform {
     position: fixed;
     top: 50%;
@@ -107,7 +101,6 @@
     font-size: 30px;
     border: none;
 }
-
 
 #passwordchange td {
     height: 60px;
