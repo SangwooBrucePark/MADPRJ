@@ -26,11 +26,7 @@ body {
 }
 
 #question_field_bg {
-    width: 130%;/*
-    transform: translate(-100px, 0px);
-    -moz-filter: brightness(150%) blur(3px) contrast(80%);
-    -webkit-filter: brightness(150%) blur(3px) contrast(80%);
-    filter: brightness(150%) blur(3px) contrast(80%);*/
+    width: 130%;
 }
 
 #gonext {
@@ -40,6 +36,7 @@ body {
     transform: translate(-50%, -50%);
     width: 70px;
     cursor: pointer;
+    border: none;
     z-index: 900;
 }
 

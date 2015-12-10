@@ -105,6 +105,7 @@
 #passwordchange input {
     width: 100%;
     font-size: 30px;
+    border: none;
 }
 
 

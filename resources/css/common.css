@@ -85,7 +85,7 @@ a, a:visited {
     top: 3%;
     height: 50px;
     color: white;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.15);
     box-shadow: 1px 1px 5px #000000;
     -webkit-appearance: none;
     -webkit-box-shadow: 1px 1px 5px #000000;

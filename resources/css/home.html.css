@@ -70,7 +70,6 @@ a, a:visited {
     font-size: 30px;
     font-family: Abel;
     width: 49%;
-    height: 100%;
 }
 #login_window table {
     width: 460px;
@@ -176,6 +175,7 @@ a, a:visited {
 
 #starttest img {
     width: 100px;
+    border: none;
 }
 
 #starttest div {

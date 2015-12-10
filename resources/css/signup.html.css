@@ -22,6 +22,7 @@
 #signinform input {
     width: 100%;
     font-size: 30px;
+    border: none;
 }
 
 #signinform td {
@@ -38,8 +39,9 @@
 }
 
 .form_col {
-    text-align: right;
+    text-align: left;
     font-family: Abel;
     font-size: 20px;
     height: 45px;
+    padding-left: 10px;
 }

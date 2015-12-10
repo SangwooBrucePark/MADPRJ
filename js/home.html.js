@@ -44,6 +44,7 @@ function login_callback(responseText) {
         setUserNameOnPage();
         showloginwindow(false);
         showstartbutton(true);
+        id("starttest").focus();
     } else {
         messagebox(login_result.reason, 300, 100, "loginerror_callback");
     }
@@ -71,6 +72,7 @@ function login_cancel() {
 function showloginwindow(enable) {
     if (enable) {
         id("login_window").style.cssText = "visibility: visible;";
+        id("login_email").focus();
     } else {
         id("login_window").style.cssText = "visibility: hidden;";
     }
