@@ -44,7 +44,7 @@
 }
 
 .form_col {
-    text-align: right;
+    padding-left: 10px;
     font-family: Abel;
     font-size: 20px;
     color: #ffffff;
@@ -92,7 +92,7 @@
 }
 
 #passwordchange button {
-    width: 49%;
+    width: 30%;
     font-size: 30px;
 }
 
