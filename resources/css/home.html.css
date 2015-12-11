@@ -165,12 +165,14 @@ a, a:visited {
     margin-top: 38px;
     font-size: 50px;
     font-family: Abel;
+    visibility: hidden;
 }
 
 .monitor_subtext {
     margin-top: -10px;
     font-size: 20px;
     font-family: Abel;
+    visibility: hidden;
 }
 
 #starttest {
@@ -195,4 +197,26 @@ a, a:visited {
     font-weight: bolder;
     text-shadow: 1px 1px 20px #ffffff;
     font-family: Abel;
+}
+
+@-webkit-keyframes monanipopup {
+    from {
+        opacity: 0;
+        transform: translate(0px, 50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes monanipopup {
+    from {
+        opacity: 0;
+        transform: translate(0px, 50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
 }

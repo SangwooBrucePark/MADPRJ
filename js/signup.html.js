@@ -11,13 +11,12 @@ function onresize_proc() {
 }
 
 function setGraphicalElements() {
-    if (window.innerWidth > 1000) {
-        if (window.innerHeight * 1.7 < window.innerWidth) {
+        if (window.innerHeight * 1.66 < window.innerWidth) {
             id("background_screen").style.cssText += "background-size: " + window.innerWidth + "px auto;";
         } else {
             id("background_screen").style.cssText += "background-size: auto " + window.innerHeight + "px;";
         }
-    }
+
 }
 
 function matchnewpassword() {

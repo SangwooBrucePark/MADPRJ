@@ -102,6 +102,7 @@ function showmonitorloading(enable) {
     }
 }
 
+var monitorvalue = {"categories":"", "members":"", "questions":""};
 function updatemonitor() {
     showmonitorloading(true);
     ajax_datatrans(requestnumofcategoriesURL, "", updatenumofcategories_callback);
@@ -113,7 +114,9 @@ function updatenumofmembers_callback(responseText) {
     var retval = JSON.parse(responseText);
 
     if (retval.result == "ok") {
-        id("nummembers_val").innerHTML = retval.members;
+        monitorvalue.members = retval.members;
+        showupdatemonitorvalue();
+        //id("nummembers_val").innerHTML = retval.members;
     } else {
         alert(retval.reason);
     }
@@ -123,7 +126,8 @@ function updatenumofcategories_callback(responseText) {
     var retval = JSON.parse(responseText);
 
     if (retval.result == "ok") {
-        id("numcategories_val").innerHTML = retval.categories;
+        monitorvalue.categories = retval.categories;
+        //id("numcategories_val").innerHTML = retval.categories;
         ajax_datatrans(requestnumofquestionsURL, "", updatenumofquestions_callback);
     } else {
         alert(retval.reason);
@@ -134,7 +138,8 @@ function updatenumofquestions_callback(responseText) {
     var retval = JSON.parse(responseText);
 
     if (retval.result == "ok") {
-        id("numquestions_val").innerHTML = retval.questions;
+        monitorvalue.questions = retval.questions;
+        //id("numquestions_val").innerHTML = retval.questions;
         ajax_datatrans(requestnumofmembersURL, "", updatenumofmembers_callback);
     } else {
         alert(retval.reason);
@@ -147,3 +152,26 @@ function passwordkeydown(event) {
     }
 }
 
+function showupdatemonitorvalue() {
+    id("numcategories_val").style.cssText += "visibility: visible;";
+    id("numcategories_val").style.cssText += "animation-name: monanipopup;";
+    id("numcategories_val").style.cssText += "animation-duration: 2s;";
+    id("numcategories_val").innerHTML = monitorvalue.categories;
+    id("numcategories_subtext").style.cssText += "visibility: visible;";
+    id("numcategories_subtext").style.cssText += "animation-name: monanipopup;";
+    id("numcategories_subtext").style.cssText += "animation-duration: 2s;";
+    id("numquestions_val").style.cssText += "visibility: visible;";
+    id("numquestions_val").style.cssText += "animation-name: monanipopup;";
+    id("numquestions_val").style.cssText += "animation-duration: 2s;";
+    id("numquestions_val").innerHTML = monitorvalue.questions;
+    id("numquestions_subtext").style.cssText += "visibility: visible;";
+    id("numquestions_subtext").style.cssText += "animation-name: monanipopup;";
+    id("numquestions_subtext").style.cssText += "animation-duration: 2s;";
+    id("nummembers_val").style.cssText += "visibility: visible;";
+    id("nummembers_val").style.cssText += "animation-name: monanipopup;";
+    id("nummembers_val").style.cssText += "animation-duration: 2s;";
+    id("nummembers_val").innerHTML = monitorvalue.members;
+    id("nummembers_subtext").style.cssText += "visibility: visible;";
+    id("nummembers_subtext").style.cssText += "animation-name: monanipopup;";
+    id("nummembers_subtext").style.cssText += "animation-duration: 2s;";
+}
