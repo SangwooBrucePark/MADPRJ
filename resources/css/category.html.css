@@ -187,3 +187,10 @@ body {
     vertical-align: top;
     text-align: center;
 }
+
+#teststart {
+    visibility: hidden;
+    position: relative;
+    text-align: center;
+    top: 100px;
+}

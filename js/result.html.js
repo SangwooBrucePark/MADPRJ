@@ -71,8 +71,12 @@ function setGraphicalElements() {
 
 function closecertificate() {
     id("certificate_block").style.cssText += "visibility: hidden;";
+    id("certificate_block").style.removeProperty("animation-name");
+    id("certificate_block").style.removeProperty("animation-duration");
 }
 
 function showcertificate() {
     id("certificate_block").style.cssText += "visibility: visible;";
+    id("certificate_block").style.cssText += "animation-name: anipopup;";
+    id("certificate_block").style.cssText += "animation-duration: 2s;";
 }

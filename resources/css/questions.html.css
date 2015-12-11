@@ -23,6 +23,8 @@ body {
     border: solid 1px #ffffff;
     z-index: 2;
     overflow: hidden;
+    animation-name: anipopup;
+    animation-duration: 2s;
 }
 
 #question_field_bg {

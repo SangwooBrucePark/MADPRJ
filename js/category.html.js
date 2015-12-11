@@ -66,12 +66,16 @@ function categoryselected(cid) {
     selected_category_name = id(cid).textContent;
     id("chosen_category").innerHTML = "<div class=\"selected_category_item\" onclick=\"categorydeselected(\'" + cid + "\')\">" + id(cid).textContent + "<img class=\"category_item_minus\" src=\"../images/img-0006.png\" /></div>";
     id(cid).style.cssText = "visibility: hidden;";
+
+    showstartbutton(true);
 }
 
 function categorydeselected(cid) {
     selected_cid = "";
     id(cid).style.cssText = "visibility: visible;";
     id("chosen_category").innerHTML = "";
+
+    showstartbutton(false);
 }
 
 function addlist() {
@@ -103,4 +107,20 @@ function preparequestions_callback(responseText) {
     } else {
         alert(retval.reason);
     }
+}
+
+function showstartbutton(enable) {
+    if (enable) {
+        id("teststart").style.cssText += "visibility: visible;";
+        id("teststart").style.cssText += "animation-name: anipopup;";
+        id("teststart").style.cssText += "animation-duration: 1s;";
+    } else {
+        id("teststart").style.cssText += "animation-name: anipopdown;";
+        id("teststart").style.cssText += "animation-duration: 1s;";
+        setTimeout(showstartbutton_delay, 800);
+    }
+}
+
+function showstartbutton_delay() {
+    id("teststart").style.cssText += "visibility: hidden;";
 }

@@ -95,6 +95,8 @@ function messagebox_ok() {
 
 function showpasswordchange() {
     id("passwordchange_block").style.cssText += "visibility: visible;";
+    id("passwordchange_block").style.cssText += "animation-name: anipopup;";
+    id("passwordchange_block").style.cssText += "animation-duration: 1s;";
     id("newpassword").value = "";
     id("curpassword").value = "";
     id("conpassword").value = "";
@@ -102,10 +104,14 @@ function showpasswordchange() {
     id("newpassword").style.cssText += "background-color: #ffffff;";
     id("conpassword").style.cssText += "box-shadow: 0px 0px 30px #000000;";
     id("conpassword").style.cssText += "background-color: #ffffff;";
+
+    id("curpassword").focus();
 }
 
 function passwordchange_cancel() {
     id("passwordchange_block").style.cssText += "visibility: hidden;";
+    id("passwordchange_block").style.removeProperty("animation-name");
+    id("passwordchange_block").style.removeProperty("animation-duration");
 }
 
 function checknewpassword() {

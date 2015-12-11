@@ -24,23 +24,29 @@
         <div style="color: black; font-weight: bolder; text-decoration: none;">Let's Start</div>
     </a>
 </div>
-<table id="monitor">
-    <tr>
-        <td><div id="numcategories">
-            <div class="monitor_text" id="numcategories_val"></div>
-            <div class="monitor_subtext">Categories</div>
-        </div></td>
-        <td><div id="numquestions">
-            <div class="monitor_text" id="numquestions_val"></div>
-            <div class="monitor_subtext">Questions</div>
-        </div></td>
-        <td><div id="nummembers">
-            <div class="monitor_text" id="nummembers_val"></div>
-            <div class="monitor_subtext">Members</div>
-        </div></td>
-    </tr>
-</table>
+<div id="monitor">
+    <div id="monitor_loading">
+        <img src="../images/img-0003.gif" />
+    </div>
+    <table>
+        <tr>
+            <td><div id="numcategories">
+                <div class="monitor_text" id="numcategories_val"></div>
+                <div class="monitor_subtext">Categories</div>
+            </div></td>
+            <td><div id="numquestions">
+                <div class="monitor_text" id="numquestions_val"></div>
+                <div class="monitor_subtext">Questions</div>
+            </div></td>
+            <td><div id="nummembers">
+                <div class="monitor_text" id="nummembers_val"></div>
+                <div class="monitor_subtext">Members</div>
+            </div></td>
+        </tr>
+    </table>
+</div>
 <div id="login_window">
+
     <form id="form_auth_info" method="post" action="../php/letmein.php">
         <table>
             <tr>
@@ -65,9 +71,7 @@
 <div id="loading">
     <img src="../images/img-0003.gif" />
 </div>
-<div id="monitor_loading">
-    <img src="../images/img-0003.gif" />
-</div>
+
 <div id="messagebox"></div>
 <div id="blocking"></div>
 </body>

@@ -31,6 +31,26 @@ a, a:visited {
     color: #ffffff;
 }
 
+@-webkit-keyframes anipopup {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes anipopup {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes anipopdown {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes anipopdown {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 #messagebox {
     position: fixed;
     top: 50%;

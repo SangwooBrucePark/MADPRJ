@@ -71,6 +71,7 @@ a, a:visited {
     font-family: Abel;
     width: 49%;
 }
+
 #login_window table {
     width: 460px;
     border-collapse: collapse;
@@ -88,7 +89,7 @@ a, a:visited {
 
 #monitor {
     position: fixed;
-    top: 80%;
+    bottom: -50px;
     left: 50%;
     height: 180px;
     width: 500px;
@@ -98,13 +99,16 @@ a, a:visited {
     z-index: 5;
 }
 
+#monitor table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
 #monitor_loading {
-    position: fixed;
-    top: 80%;
-    left: 50%;
-    height: 180px;
-    width: 500px;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     visibility: hidden;
     z-index: 6;
@@ -127,6 +131,8 @@ a, a:visited {
     -moz-border-radius: 100px;
     border-radius: 100px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #numquestions {
@@ -138,6 +144,8 @@ a, a:visited {
     -moz-border-radius: 100px;
     border-radius: 100px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #nummembers {
@@ -149,6 +157,8 @@ a, a:visited {
     -moz-border-radius: 100px;
     border-radius: 100px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .monitor_text {

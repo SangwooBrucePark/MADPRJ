@@ -72,17 +72,25 @@ function login_cancel() {
 function showloginwindow(enable) {
     if (enable) {
         id("login_window").style.cssText = "visibility: visible;";
+        id("login_window").style.cssText += "animation-name: anipopup;";
+        id("login_window").style.cssText += "animation-duration: 1s;";
         id("login_email").focus();
     } else {
         id("login_window").style.cssText = "visibility: hidden;";
+        id("login_window").style.removeProperty("animation-name");
+        id("login_window").style.removeProperty("animation-duration");
     }
 }
 
 function showstartbutton(enable) {
     if (enable) {
         id("starttest").style.cssText += "visibility: visible;";
+        id("starttest").style.cssText += "animation-name: anipopup;";
+        id("starttest").style.cssText += "animation-duration: 2s;";
     } else {
         id("starttest").style.cssText += "visibility: hidden;";
+        id("starttest").style.removeProperty("animation-name");
+        id("starttest").style.removeProperty("animation-duration");
     }
 }
 
