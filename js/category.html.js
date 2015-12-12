@@ -64,7 +64,7 @@ function categoryselected(cid) {
 
     selected_cid = cid;
     selected_category_name = id(cid).textContent;
-    id("chosen_category").innerHTML = "<div class=\"selected_category_item\" onclick=\"categorydeselected(\'" + cid + "\')\">" + id(cid).textContent + "<img class=\"category_item_minus\" src=\"../images/img-0006.png\" /></div>";
+    id("chosen_category").innerHTML = "<div class=\"selected_category_item\" onclick=\"categorydeselected(\'" + cid + "\')\">" + selected_category_name + "<img class=\"category_item_minus\" src=\"../images/img-0006.png\" /></div>";
     id(cid).style.cssText = "visibility: hidden;";
 
     showstartbutton(true);
@@ -117,10 +117,6 @@ function showstartbutton(enable) {
     } else {
         id("teststart").style.cssText += "animation-name: anipopdown;";
         id("teststart").style.cssText += "animation-duration: 1s;";
-        setTimeout(showstartbutton_delay, 800);
+        id("teststart").style.cssText += "visibility: hidden;";
     }
-}
-
-function showstartbutton_delay() {
-    id("teststart").style.cssText += "visibility: hidden;";
 }

@@ -12,9 +12,7 @@
     position: absolute;
     top: 30%;
     left: 13%;
-    width: 43%;
-    min-width: 500px;
-    max-width: 900px;
+    height: 53%;
     z-index: 2;
 }
 
@@ -110,11 +108,19 @@ a.certificatelink  {
 #for {
     position: absolute;
     top: 415px;
-    width: 780px;
+    width: 500px;
+    left: 50%;
+    transform: translate(-50%, 0px);
     text-align: center;
     font-family: Tangerine;
     font-size: 50px;
     font-weight: bolder;
+    overflow : hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
 }
 
 #issuedate {

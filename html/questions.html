@@ -22,11 +22,11 @@
             <table>
                 <tr>
                     <td style="width: 130px;">Category :</td>
-                    <td id="category_name" style="font-size: 25px;"></td>
+                    <td><div id="category_name"></div></td>
                     <td style="width: 100px;">Progress :</td>
                     <td id="progress" style="text-align: left; width: 50px"></td>
-                    <td style="width: 100px;">Time Limit :</td>
-                    <td style="width: 100px;"><progress id="progbar" value="22" max="200"></progress></td>
+                    <td style="width: 100px; white-space: nowrap;">Time Limit :</td>
+                    <td><progress id="progbar" value="22" max="200"></progress></td>
                     <td id="timerview" style="font-size: 30px; width: 120px;">00:00</td>
                 </tr>
             </table>
@@ -38,10 +38,10 @@
             <tr>
                 <td id="answer">
                     <form method="post" action="../php/answerquestion.php" id="user_choice">
-                        <input type="radio" name="user_answer" value="" /><label name="user_answer_label"></label><br />
-                        <input type="radio" name="user_answer" value="" /><label name="user_answer_label"></label><br />
-                        <input type="radio" name="user_answer" value="" /><label name="user_answer_label"></label><br />
-                        <input type="radio" name="user_answer" value="" /><label name="user_answer_label"></label>
+                        <input id="opt1" type="radio" name="user_answer" value="" /><label name="user_answer_label" onclick="clicklabelradio('opt1')"></label><br />
+                        <input id="opt2" type="radio" name="user_answer" value="" /><label name="user_answer_label" onclick="clicklabelradio('opt2')"></label><br />
+                        <input id="opt3" type="radio" name="user_answer" value="" /><label name="user_answer_label" onclick="clicklabelradio('opt3')"></label><br />
+                        <input id="opt4" type="radio" name="user_answer" value="" /><label name="user_answer_label" onclick="clicklabelradio('opt4')"></label>
                     </form>
                 </td>
             </tr>

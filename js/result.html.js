@@ -57,8 +57,8 @@ function setGraphicalElements() {
         id("background_screen_img").style.cssText += "height: " + window.innerHeight + "px;";
     }
 
-    var report_field_height = id("report_field").offsetWidth / 1.6;
-    id("report_field").style.cssText += "height: " + report_field_height + "px;";
+    var report_field_width = id("report_field").offsetHeight * 1.6;
+    id("report_field").style.cssText += "width: " + report_field_width + "px;";
 
     var report_field_width = id("report_field").offsetWidth;
     var title_font_size = report_field_width / 10;

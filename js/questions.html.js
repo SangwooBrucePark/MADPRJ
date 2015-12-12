@@ -160,3 +160,7 @@ var movenext = false;
 function movenextquestion() {
     movenext = true;
 }
+
+function clicklabelradio(radio_id) {
+    id(radio_id).checked = true;
+}

@@ -165,13 +165,15 @@ a, a:visited {
     margin-top: 38px;
     font-size: 50px;
     font-family: Abel;
-    visibility: hidden;
 }
 
 .monitor_subtext {
     margin-top: -10px;
     font-size: 20px;
     font-family: Abel;
+}
+
+#numcategories_text_block, #numquestions_text_block, #nummembers_text_block {
     visibility: hidden;
 }
 
@@ -202,7 +204,7 @@ a, a:visited {
 @-webkit-keyframes monanipopup {
     from {
         opacity: 0;
-        transform: translate(0px, 50%);
+        transform: translate(0px, 20%);
     }
     to {
         opacity: 1;
@@ -213,7 +215,7 @@ a, a:visited {
 @keyframes monanipopup {
     from {
         opacity: 0;
-        transform: translate(0px, 50%);
+        transform: translate(0px, 20%);
     }
     to {
         opacity: 1;

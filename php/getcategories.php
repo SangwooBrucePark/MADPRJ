@@ -31,6 +31,7 @@ $ret_val = array("result" => "ok", "reason" => "", "categories" =>
         array("cid" => "c-0014", "category_name" => "9 Computer knowledge"),
         array("cid" => "c-0015", "category_name" => "C++ Pointers"),
         array("cid" => "c-0016", "category_name" => "Oops"),
+        array("cid" => "c-0018", "category_name" => "This is a test category to check how a long category name influences the shape of the element."),
         array("cid" => "c-0017", "category_name" => "DHTML")
     )
 );

@@ -42,26 +42,32 @@ body {
 
 .fixed_headers th {
     text-decoration: underline;
+    padding: 5px;
+    text-align: center;
 }
 
-.fixed_headers th, .fixed_headers td {
+.fixed_headers td {
     padding: 5px;
     text-align: left;
-    word-break: break-all;
 }
 
 .fixed_headers th:nth-child(1) {
-    min-width: 250px;
-    text-align: center;
+    width: 250px;
 }
 
-.fixed_headers td:nth-child(1) {
-    min-width: 250px;
+.fixed_headers td:nth-child(1) div {
+    overflow : hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+    width: 250px;
 }
 
 .fixed_headers td:nth-child(2), .fixed_headers th:nth-child(2) {
-    min-width: 60px;
-    text-align: center;
+    width: 60px;
+    text-align: right;
 }
 
 .fixed_headers td:nth-child(3), .fixed_headers th:nth-child(3) {

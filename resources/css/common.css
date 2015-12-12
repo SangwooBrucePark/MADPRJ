@@ -32,23 +32,47 @@ a, a:visited {
 }
 
 @-webkit-keyframes anipopup {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @keyframes anipopup {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @-webkit-keyframes anipopdown {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 @keyframes anipopdown {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 #messagebox {

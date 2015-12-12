@@ -28,7 +28,6 @@ body {
     overflow: hidden;
 }
 
-
 #head_image img {
     transform: translate(0px, -100px);
     /*-webkit-filter: blur(2px) sepia(60%) brightness(60%);*/
@@ -100,11 +99,11 @@ body {
 }
 
 .category_item {
-    width: 250px;
-    height: 20px;
+    width: 235px;
+    height: 18px;
     text-align: left;
-    margin: 0px 0px 5px 0px;
-    padding: 5px 10px 5px 30px;
+    margin: 0px;
+    padding: 7px 40px 5px 15px;
     -moz-box-shadow:inset 0px 0px 14px -3px #f2fadc;
     -webkit-appearance: none;
     -webkit-box-shadow:inset 0px 0px 14px -3px #f2fadc;
@@ -124,18 +123,26 @@ body {
     display:inline-block;
     cursor:pointer;
     color:#757d6f;
-    font-family:Arial;
+    font-family: Arial;
     font-size:15px;
     font-weight:bold;
     text-decoration:none;
     text-shadow:0px 1px 0px #ced9bf;
+
+    overflow : hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
 }
 
 .selected_category_item {
-    width: 330px;
+    width: 300px;
     height: 35px;
     text-align: left;
     margin: 0px;
+    padding: 18px 45px 5px 20px;
     -moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
     -webkit-appearance: none;
     -webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
@@ -158,9 +165,15 @@ body {
     font-family:Arial;
     font-size:20px;
     font-weight:bold;
-    padding: 15px 10px 5px 30px;
     text-decoration:none;
     text-shadow:0px 1px 0px #528ecc;
+
+    overflow : hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
 }
 
 .category_item_plus {

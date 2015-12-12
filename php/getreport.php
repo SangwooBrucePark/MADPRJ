@@ -30,7 +30,7 @@ $ret_val = array("result" => "ok", "reason" => "", "reports" =>
         array("category_name" => "Oops", "score" => "4", "attent_at" => "2015-12-31 11:11", "ispass" => "Failed"),
         array("category_name" => "Mainframe", "score" => "9", "attent_at" => "2015-12-31 11:11", "ispass" => "Pass"),
         array("category_name" => "JDBC", "score" => "8", "attent_at" => "2015-12-31 11:11", "ispass" => "Pass"),
-        array("category_name" => "Struts", "score" => "3", "attent_at" => "2015-12-31 11:11", "ispass" => "Failed"),
+        array("category_name" => "This is a test category to check how a long category name influences the shape of the element.", "score" => "3", "attent_at" => "2015-12-31 11:11", "ispass" => "Failed"),
         array("category_name" => "Cognos 2", "score" => "6", "attent_at" => "2015-12-31 11:11", "ispass" => "Failed")
     )
 );

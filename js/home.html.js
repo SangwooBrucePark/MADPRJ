@@ -153,6 +153,19 @@ function passwordkeydown(event) {
 }
 
 function showupdatemonitorvalue() {
+    id("numcategories_text_block").style.cssText += "visibility: visible;";
+    id("numcategories_text_block").style.cssText += "animation-name: monanipopup;";
+    id("numcategories_text_block").style.cssText += "animation-duration: 2s;";
+    id("numcategories_val").innerHTML = monitorvalue.categories;
+    id("numquestions_text_block").style.cssText += "visibility: visible;";
+    id("numquestions_text_block").style.cssText += "animation-name: monanipopup;";
+    id("numquestions_text_block").style.cssText += "animation-duration: 2s;";
+    id("numquestions_val").innerHTML = monitorvalue.questions;
+    id("nummembers_text_block").style.cssText += "visibility: visible;";
+    id("nummembers_text_block").style.cssText += "animation-name: monanipopup;";
+    id("nummembers_text_block").style.cssText += "animation-duration: 2s;";
+    id("nummembers_val").innerHTML = monitorvalue.members;
+    /*
     id("numcategories_val").style.cssText += "visibility: visible;";
     id("numcategories_val").style.cssText += "animation-name: monanipopup;";
     id("numcategories_val").style.cssText += "animation-duration: 2s;";
@@ -160,6 +173,7 @@ function showupdatemonitorvalue() {
     id("numcategories_subtext").style.cssText += "visibility: visible;";
     id("numcategories_subtext").style.cssText += "animation-name: monanipopup;";
     id("numcategories_subtext").style.cssText += "animation-duration: 2s;";
+
     id("numquestions_val").style.cssText += "visibility: visible;";
     id("numquestions_val").style.cssText += "animation-name: monanipopup;";
     id("numquestions_val").style.cssText += "animation-duration: 2s;";
@@ -173,5 +187,5 @@ function showupdatemonitorvalue() {
     id("nummembers_val").innerHTML = monitorvalue.members;
     id("nummembers_subtext").style.cssText += "visibility: visible;";
     id("nummembers_subtext").style.cssText += "animation-name: monanipopup;";
-    id("nummembers_subtext").style.cssText += "animation-duration: 2s;";
+    id("nummembers_subtext").style.cssText += "animation-duration: 2s;";*/
 }

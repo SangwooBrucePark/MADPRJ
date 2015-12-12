@@ -29,6 +29,11 @@
     font-size: 25px;
 }
 
+#changeinfoform input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+}
+
 #changeinfoform td {
     height: 60px;
 }
@@ -92,7 +97,7 @@
 }
 
 #passwordchange button {
-    width: 30%;
+    width: 49%;
     font-size: 30px;
 }
 
