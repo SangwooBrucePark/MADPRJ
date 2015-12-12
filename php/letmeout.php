@@ -13,6 +13,7 @@ if (!isset($_SESSION["email"])) {
     echo json_encode($ret_val);
     return;
 }*/
+session_start();
 session_destroy();
 
 $ret_val = array("result" => "ok", "reason" => "");
