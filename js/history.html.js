@@ -2,7 +2,7 @@
  * Created by bruce on 2015-12-04.
  */
 
-var requesthistoryURL = "../php/getreport.php";
+var requesthistoryURL = "../php/ctrl.php?action=getreport";
 
 function onload_proc() {
     if (!isLogin()) {

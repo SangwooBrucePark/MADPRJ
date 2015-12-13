@@ -11,7 +11,7 @@ function doloadingscreen(enable) {
 
 function logout() {
     doloadingscreen(true);
-    ajax_datatrans("../php/letmeout.php", "", logout_callback);
+    ajax_datatrans("../libs/ctrl.php?action=letmeout", "", logout_callback);
 }
 
 function logout_callback(responseText) {
@@ -28,7 +28,7 @@ function logout_callback(responseText) {
 
         location.href = "home.html";
     } else {
-        alert(logout_result.reason)
+        alert(logout_result.reason);
     }
 }
 

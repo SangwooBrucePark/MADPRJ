@@ -2,8 +2,8 @@
  * Created by bruce on 2015-12-01.
  */
 
-var getcategory_url = "../php/getcategories.php";
-var preparequestions_url = "../php/preparequestions.php";
+var getcategory_url = "../libs/ctrl.php?action=getcategories";
+var preparequestions_url = "../libs/ctrl.php?action=preparequestions";
 
 var categories_json = [];
 var categories_map = {};

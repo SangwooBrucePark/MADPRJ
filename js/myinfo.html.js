@@ -2,8 +2,8 @@
  * Created by bruce on 2015-12-05.
  */
 
-var requestModifyURL = "../php/modifyuserinfo.php";
-var requestPasswordURL = "../php/modifypassword.php";
+var requestModifyURL = "../libs/ctrl.php?action=modifyuserinfo";
+var requestPasswordURL = "../libs/ctrl.php?action=modifypassword";
 
 function onload_proc() {
     if (!isLogin()) {
@@ -161,6 +161,7 @@ function passwordchange_submit_callback(responseText) {
         messagebox("The password is successfully changed", 500, 150, "passwordchange_success_ok");
     } else {
         messagebox(retval.reason, 300, 200, "hidemessagebox");
+        doloadingscreen(false);
     }
 }
 

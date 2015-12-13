@@ -2,9 +2,9 @@
  * Created by bruce on 2015-12-01.
  */
 
-var requestnumofcategoriesURL = "../php/getnumofcategories.php";
-var requestnumofmembersURL = "../php/getnumofmembers.php";
-var requestnumofquestionsURL = "../php/getnumofquestions.php";
+var requestnumofcategoriesURL = "../libs/ctrl.php?action=getnumofcategories";
+var requestnumofmembersURL = "../libs/ctrl.php?getnumofmembers";
+var requestnumofquestionsURL = "../libs/ctrl.php?action=getnumofquestions";
 
 function onload_proc() {
     setUserNameOnPage();
@@ -46,7 +46,7 @@ function login_callback(responseText) {
         showstartbutton(true);
         id("starttest").focus();
     } else {
-        messagebox(login_result.reason, 300, 100, "loginerror_callback");
+        messagebox(login_result.reason, 400, 150, "loginerror_callback");
     }
 }
 

@@ -5,8 +5,8 @@
 var selected_category_name = "";
 var selected_cid = "";
 var numberofquestions = "";
-var requestQuestionURL = "../php/getquestion.php";
-var answerQuestionURL = "../php/answerquestion.php";
+var requestQuestionURL = "../libs/ctrl.php?action=getquestion";
+var answerQuestionURL = "../libs/ctrl.php?action=answerquestion";
 
 var cur_question_number = 1;
 var timelimit = 15; // second

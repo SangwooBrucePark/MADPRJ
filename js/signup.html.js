@@ -1,6 +1,9 @@
 /**
  * Created by bruce on 2015-12-02.
  */
+
+var requestletmeinURL = "../libs/ctrl.php?action=letmein";
+
 function onload_proc() {
     setGraphicalElements();
     menubar_items(false, false, true, false, false, false, false);
@@ -71,14 +74,14 @@ function submitsignup_callback(responseText) {
     if (retval.result == "ok") {
         messagebox("Signup is successful!!<br />Login will be automatically committed.", 500, 200, "login");
     } else {
-        messagebox("Signin is failed." + result.reason, 500, 200, "hidemessagebox");
+        messagebox("Signin is failed." + retval.reason, 500, 200, "hidemessagebox");
     }
 }
 
 function login() {
     hidemessagebox();
     doloadingscreen(true);
-    ajax_datatrans("../php/letmein.php", "p=" + b64(JSON.stringify(login_info)), login_callback);
+    ajax_datatrans(requestletmeinURL, "p=" + b64(JSON.stringify(login_info)), login_callback);
 }
 
 function login_callback(responseText) {

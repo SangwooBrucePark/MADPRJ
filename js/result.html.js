@@ -2,7 +2,7 @@
  * Created by bruce on 2015-12-04.
  */
 
-var requestgetresultURL = "../php/getresult.php";
+var requestgetresultURL = "../libs/ctrl.php?action=getresult";
 var selected_category_name = "";
 
 function onload_proc() {
