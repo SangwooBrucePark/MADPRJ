@@ -178,11 +178,11 @@ body {
 
 #countdown {
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
     z-index: 900;
 }
 
