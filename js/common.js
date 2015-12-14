@@ -3,7 +3,7 @@
  */
 function doloadingscreen(enable) {
     if (enable) {
-        id("loading").style.cssText += "visibility: visible;";
+        //id("loading").style.cssText += "visibility: visible;";
     } else {
         id("loading").style.cssText += "visibility: hidden;";
     }

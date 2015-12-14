@@ -87,6 +87,9 @@ function timer() {
         //id("progbar").value = timelimit_mil;
         if (timelimit_mil % 10 == 0) {
             id("progbar").value = timelimit_mil;
+            if (timelimit_mil % 100 == 0) {
+                showcountdown(parseInt(timelimit_mil / 100));
+            }
         }
         timelimit_mil--;
 
@@ -145,6 +148,7 @@ function requestQuestion_callback(responseText) {
     var retval = JSON.parse(responseText);
     if (retval.result == "ok") {
         id("question").innerHTML = "<span style=\"background-color: #e4e4e4; font-family: Abel; font-size: 33px;\">" + retval.question + "</span>";
+        id("question_sub").innerHTML = "<span style=\"background-color: #e4e4e4; font-family: Abel; font-size: 20px;\">" + retval.description + "</span>";
         for (var i = 0; i < name("user_answer").length; i++) {
             name("user_answer")[i].value = i;
             name("user_answer")[i].checked = false;
@@ -163,4 +167,14 @@ function movenextquestion() {
 
 function clicklabelradio(radio_id) {
     id(radio_id).checked = true;
+}
+
+function showcountdown(sec) {
+    if (1 <= sec && sec <= 10) {
+        if (sec <= 9) {
+            id("countdown").innerHTML = "<img src=\"../images/img-010" + sec + ".png\" />";
+        } else {
+            id("countdown").innerHTML = "<img src=\"../images/img-01" + sec + ".png\" />";
+        }
+    }
 }
