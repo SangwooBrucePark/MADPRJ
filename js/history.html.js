@@ -2,7 +2,7 @@
  * Created by bruce on 2015-12-04.
  */
 
-var requesthistoryURL = "../php/ctrl.php?action=getreport";
+var requesthistoryURL = "../libs/ctrl.php?action=getreport";
 
 function onload_proc() {
     if (!isLogin()) {
@@ -51,7 +51,7 @@ function messagebox_ok() {
 
 function addlist(reports) {
     for (var i = 0; i < reports.length; i++) {
-        id("history_body").innerHTML += "<tr><td><div>" + reports[i].category_name + "</div></td><td>" + reports[i].score + "</td><td>" + reports[i].attent_at + "</td><td>" + reports[i].ispass + "</td></tr>";
+        id("history_body").innerHTML += "<tr><td><div>" + reports[i].category_name + "</div></td><td>" + reports[i].score + "</td><td>" + reports[i].attend_at + "</td><td>" + reports[i].ispass + "</td></tr>";
     }
 
     doloadingscreen(false);

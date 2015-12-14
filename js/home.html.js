@@ -3,7 +3,7 @@
  */
 
 var requestnumofcategoriesURL = "../libs/ctrl.php?action=getnumofcategories";
-var requestnumofmembersURL = "../libs/ctrl.php?getnumofmembers";
+var requestnumofmembersURL = "../libs/ctrl.php?action=getnumofmembers";
 var requestnumofquestionsURL = "../libs/ctrl.php?action=getnumofquestions";
 
 function onload_proc() {
