@@ -30,7 +30,7 @@ function getresult_callback(responseText) {
 
     var retval = JSON.parse(responseText);
     if (retval.result == "ok") {
-        id("yourmarks").textContent = retval.score + "/" + retval.numofq;
+        id("yourmarks").textContent = retval.nright + "/" + retval.numofq;
         if (retval.ispass == "pass") {
             id("comment").innerHTML = "Take you certificate by clicking the link below.<br /><a class=\"certificatelink\" href=\"#\" onclick=\"showcertificate()\">Click</a>";
             id("presentedby").textContent = getCookie("fname") + " " + getCookie("lname");
