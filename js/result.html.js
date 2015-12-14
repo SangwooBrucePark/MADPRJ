@@ -37,7 +37,7 @@ function getresult_callback(responseText) {
             id("for").textContent = retval.category_name;
             id("issuedate").textContent = retval.issuedate;
         } else {
-            id("comment").innerHTML = "Well doen. But you need more practice<br />to get a certificate.";
+            id("comment").innerHTML = "Well done. But you need more practice<br />to get a certificate.";
         }
     } else {
         messagebox("error : " + retval.reason, 300, 200, "messagebox_close");
@@ -79,4 +79,23 @@ function showcertificate() {
     id("certificate_block").style.cssText += "visibility: visible;";
     id("certificate_block").style.cssText += "animation-name: anipopup;";
     id("certificate_block").style.cssText += "animation-duration: 2s;";
+}
+
+function getdateincert(datestr) {
+    //
+    var yy = parseInt(sDate.substr(0, 4), 10);
+    var mm = parseInt(sDate.substr(5, 2), 10);
+    var dd = parseInt(sDate.substr(8), 10);
+
+    var d = new Date(yy,mm - 1, dd);
+    var weekday=new Array(7);
+    weekday[0]="일";
+    weekday[1]="월";
+    weekday[2]="화";
+    weekday[3]="수";
+    weekday[4]="목";
+    weekday[5]="금";
+    weekday[6]="토";
+
+    return weekday[d.getDay()];
 }
