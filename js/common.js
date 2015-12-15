@@ -1,6 +1,9 @@
 /**
  * Created by bruce on 2015-12-03.
  */
+
+var requestletmeoutURL = "../libs/ctrl.php?action=letmeout";
+
 function doloadingscreen(enable) {
     if (enable) {
         //id("loading").style.cssText += "visibility: visible;";
@@ -11,7 +14,7 @@ function doloadingscreen(enable) {
 
 function logout() {
     doloadingscreen(true);
-    ajax_datatrans("../libs/ctrl.php?action=letmeout", "", logout_callback);
+    ajax_datatrans(requestletmeoutURL, "", logout_callback);
 }
 
 function logout_callback(responseText) {
